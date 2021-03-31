@@ -93,8 +93,6 @@ public class TaskController {
 
 }
 
-
-
 //Projeto: TODO-LIST API (API para armazenamento/leitura de tarefas) 
 //
 //- Criar uma RESTFUL API simples (em sua linguagem preferida) que armazene e atualize tarefas (TODO LIST API). (ex: GET, PUT, POST, DELETE /todo)

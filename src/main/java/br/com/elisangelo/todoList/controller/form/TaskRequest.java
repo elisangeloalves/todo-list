@@ -22,10 +22,7 @@ public class TaskRequest {
 	}
 
 	public Task toEntity() {
-		return new Task(
-				this.name,
-				this.status
-				);
+		return new Task(this.name, this.status);
 	}
 
 	public Task update(Task task) {

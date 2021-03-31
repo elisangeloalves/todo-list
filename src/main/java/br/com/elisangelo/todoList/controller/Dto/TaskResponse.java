@@ -6,23 +6,25 @@ import java.util.stream.Collectors;
 import br.com.elisangelo.todoList.model.Task;
 
 public class TaskResponse {
-	
+
 	private Long id;
 	private String name;
 	private String status;
-	
+
 	public TaskResponse(Task task) {
 		this.id = task.getId();
 		this.name = task.getName();
-		this.status = task.getStatus().toString();		
+		this.status = task.getStatus().toString();
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public String getStatus() {
 		return status;
 	}
