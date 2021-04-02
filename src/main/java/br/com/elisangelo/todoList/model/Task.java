@@ -1,5 +1,6 @@
 package br.com.elisangelo.todoList.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -10,24 +11,29 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.springframework.util.Assert;
+
 @Entity
 public class Task {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@NotBlank
+	@Column(nullable=false, name="task_name", length=100)
 	private String name;
-	@NotNull
+	@NotNull @Column(nullable=false)
 	@Enumerated(EnumType.STRING)
-	private Status status;
+	private Status status = Status.pending;
 
 	@Deprecated
 	public Task() {
 	};
 
-	public Task(@NotBlank String name, @Valid @NotNull Status status) {
+	public Task(@NotBlank String name, Status status) {
 		this.name = name;
+		if (status != null) {
 		this.status = status;
+		}
 	};
 
 	public Long getId() {
@@ -40,11 +46,6 @@ public class Task {
 
 	public Status getStatus() {
 		return status;
-	}
-
-	public void setName(@NotBlank String editedName) {
-		this.name = editedName;
-
 	}
 
 	public void setStatus(@NotNull @Valid Status editedStatus) {
