@@ -15,18 +15,23 @@ services:
     image: mysql:latest
     container_name: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=mysql-root
     ports:
       - 3306:3306
     restart: unless-stopped
 
   prometheus:
     image: prom/prometheus
+    container_name: prometheus
     volumes:
-      - .prometheus.yml:/prometheus
+      - ./config:/etc/prometheus
+      - ./data/prometheus:/data
     command:
-      - '--config.file=/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/data'
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus-data'
     ports:
       - 9090:9090
     restart: unless-stopped
+
+volumes:
+  prometheus-data:

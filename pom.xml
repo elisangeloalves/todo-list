@@ -12,7 +12,7 @@
 	<groupId>br.com.elisangelo.todoList</groupId>
 	<artifactId>todoList</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Minhas_lista_de_tarefas</name>
+	<name>MyTodoList</name>
 	<description>project for Spring Boot with todo-task functionality</description>
 	<properties>
 		<java.version>11</java.version>
@@ -48,7 +48,6 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
-			<version>${micrometer.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.prometheus</groupId>
@@ -59,12 +58,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-   <dependency>
-     <groupId>com.github.estuaryoss</groupId>
-     <artifactId>agent</artifactId>
-     <version>4.2.1</version>
-   </dependency>
- </dependencies>
+    </dependencies>
 	<build>
 		<plugins>
 			<plugin>

@@ -1,10 +1,8 @@
 package br.com.elisangelo.todoList.controller;
 
 import java.net.URI;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
@@ -29,11 +27,9 @@ import br.com.elisangelo.todoList.controller.form.UpdateRequest;
 import br.com.elisangelo.todoList.model.Status;
 import br.com.elisangelo.todoList.model.Task;
 import br.com.elisangelo.todoList.repository.TaskRepository;
-import io.micrometer.core.annotation.Timed;
 
 @RestController
 @RequestMapping("/todo")
-@Timed
 public class TaskController {
 
 	@Autowired

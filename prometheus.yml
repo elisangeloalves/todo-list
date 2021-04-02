@@ -11,7 +11,7 @@ scrape_configs:
     static_configs:
       - targets: ['todo-backend:8080']
         labels:
-          group: 'app-todo-list'
+          group: 'app'
 
       - targets: ['mysql:3306']
         labels:
