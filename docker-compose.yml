@@ -1,0 +1,32 @@
+version: '3'
+services:
+  todo-backend:
+    build: .
+    container_name: todo-backend
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql
+      - prometheus
+    environment:
+      DB_HOST: mysql
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - .prometheus.yml:/prometheus
+    command:
+      - '--config.file=/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/data'
+    ports:
+      - 9090:9090
+    restart: unless-stopped

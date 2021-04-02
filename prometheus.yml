@@ -1,0 +1,18 @@
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+scrape_configs:
+  - job_name: todo-list
+    scrape_interval: 5s
+    metrics_path: '/prometheus'
+    static_configs:
+      - targets: ['todo-backend:8080']
+        labels:
+          group: 'app-todo-list'
+
+      - targets: ['mysql:3306']
+        labels:
+          group: 'database'
