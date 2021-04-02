@@ -1,8 +1,10 @@
 package br.com.elisangelo.todoList.controller;
 
 import java.net.URI;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
@@ -23,12 +25,15 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import br.com.elisangelo.todoList.controller.Dto.TaskResponse;
 import br.com.elisangelo.todoList.controller.form.TaskRequest;
+import br.com.elisangelo.todoList.controller.form.UpdateRequest;
 import br.com.elisangelo.todoList.model.Status;
 import br.com.elisangelo.todoList.model.Task;
 import br.com.elisangelo.todoList.repository.TaskRepository;
+import io.micrometer.core.annotation.Timed;
 
 @RestController
 @RequestMapping("/todo")
+@Timed
 public class TaskController {
 
 	@Autowired
@@ -53,8 +58,7 @@ public class TaskController {
 			List<Task> selectedTask = repository.findByName(name);
 			return TaskResponse.convertedList(selectedTask);
 		} else {
-			List<Task> tasks = repository.findAll();
-			return TaskResponse.convertedList(tasks);
+			return TaskResponse.convertedList(repository.findAll());
 		}
 
 	}
@@ -74,39 +78,24 @@ public class TaskController {
 		Optional<Task> optional = repository.findById(id);
 		if (optional.isPresent()) {
 			repository.deleteById(id);
-			return ResponseEntity.ok("{ message: Tarefa deletada com sucesso } ");
+			return ResponseEntity.ok("{\n\tmessage: Tarefa deletada com sucesso\n} ");
 		}
 
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{ message: Tarefa não encontrada } ");
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\n\tmessage: Tarefa não encontrada\n} ");
 	}
 
 	@PutMapping("/{id}")
 	@Transactional
-	public ResponseEntity<?> updateTask(@PathVariable Long id, @RequestBody @Valid TaskRequest request) {
-		Optional<Task> optional = repository.findById(id);
-		if (optional.isPresent()) {
-			Task editedTask = request.update(optional.get());
-			return ResponseEntity.ok(new TaskResponse(editedTask));
+	public ResponseEntity<TaskResponse> updateTask(@PathVariable Long id, @RequestBody @Valid UpdateRequest request) {
+
+		Optional<Task> optionalTask = repository.findById(id);
+		if (optionalTask.isPresent()) {
+			optionalTask.get().setStatus(request.getStatus());
+			return ResponseEntity.ok(new TaskResponse(optionalTask.get()));
 		}
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{ message: Tarefa não encontrada } ");
+		return  ResponseEntity.notFound().build();
+
 	}
 
 }
 
-//Projeto: TODO-LIST API (API para armazenamento/leitura de tarefas) 
-//
-//- Criar uma RESTFUL API simples (em sua linguagem preferida) que armazene e atualize tarefas (TODO LIST API). (ex: GET, PUT, POST, DELETE /todo)
-//
-// Informações sobre a API:
-//
-//  - Toda tarefa deve possuir um status (pending ou completed)
-//
-//  - A API deve persistir os dados em um banco de dados
-//
-//  - A API deve disponibilizar uma rota para listagem das tarefas e seu status (GET /todo)
-//
-//  - A API deve fornecer uma rota para validar o funcionamento de seus componentes (GET /healthcheck)
-//
-//  - A API deve fornecer uma rota com indicadores de performance da API (ex: volume de requisições atendidas, tempo médio de serviço em milisegundos, etc) (GET /metrics)
-//
-//  - Não é necessário desenvolver o Frontend para input dos dados na API.

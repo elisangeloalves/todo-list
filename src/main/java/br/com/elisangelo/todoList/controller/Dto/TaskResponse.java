@@ -1,20 +1,22 @@
 package br.com.elisangelo.todoList.controller.Dto;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
+import br.com.elisangelo.todoList.model.Status;
 import br.com.elisangelo.todoList.model.Task;
 
 public class TaskResponse {
 
 	private Long id;
 	private String name;
-	private String status;
+	private Status status;
 
 	public TaskResponse(Task task) {
 		this.id = task.getId();
 		this.name = task.getName();
-		this.status = task.getStatus().toString();
+		this.status = task.getStatus();
 	}
 
 	public Long getId() {
@@ -25,12 +27,12 @@ public class TaskResponse {
 		return name;
 	}
 
-	public String getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	public static List<TaskResponse> convertedList(List<Task> tasks) {
-		return tasks.stream().map(TaskResponse::new).collect(Collectors.toList());
+	public static List<TaskResponse> convertedList(List<Task> selectedTask) {
+		return selectedTask.stream().map(TaskResponse::new).collect(Collectors.toList());
 	}
 
 }
