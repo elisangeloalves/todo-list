@@ -10,6 +10,8 @@ services:
       - prometheus
     environment:
       DB_HOST: mysql
+    networks:
+      - todo-network
 
   mysql:
     image: mysql:latest
@@ -19,6 +21,8 @@ services:
     ports:
       - 3306:3306
     restart: unless-stopped
+    networks:
+      - todo-network
 
   prometheus:
     image: prom/prometheus
@@ -32,6 +36,12 @@ services:
     ports:
       - 9090:9090
     restart: unless-stopped
+    networks:
+      - todo-network
+
+networks:
+  todo-network:
+    driver: bridge
 
 volumes:
   prometheus-data:
