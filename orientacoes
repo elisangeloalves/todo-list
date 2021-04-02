@@ -1,0 +1,39 @@
+
+//Projeto: TODO-LIST API (API para armazenamento/leitura de tarefas) 
+//
+//- Criar uma RESTFUL API simples (em sua linguagem preferida) que armazene e atualize tarefas (TODO LIST API). (ex: GET, PUT, POST, DELETE /todo)
+//
+// Informações sobre a API:
+//
+//  - Toda tarefa deve possuir um status (pending ou completed)
+//
+//  - A API deve persistir os dados em um banco de dados
+//
+//  - A API deve disponibilizar uma rota para listagem das tarefas e seu status (GET /todo)
+//
+//  - A API deve fornecer uma rota para validar o funcionamento de seus componentes (GET /healthcheck)
+//
+//  - A API deve fornecer uma rota com indicadores de performance da API (ex: volume de requisições atendidas, tempo médio de serviço em milisegundos, etc) (GET /metrics)
+//
+//  - Não é necessário desenvolver o Frontend para input dos dados na API.
+
+
+// para roda aplicação comando: docker-compose up -d
+
+// > criar um crud para tarefas
+// > validação de unicidade para nome da tarefa
+// > tratamento de erro personalizado
+// testes de integraçao
+
+// docker container ( containerizar as aplicações )
+// Swagger ( documentação )
+// prometheus e Actuator 
+
+
+
+
+# Monitoramento da aplicação
+# https://github.com/zup-academy/nosso-cartao-documentacao/blob/master/proposta/065.como_saber_tudo_funcionando_corretamente.md 
+
+#configuração do healthCheck
+# https://github.com/zup-academy/nosso-cartao-documentacao/blob/master/proposta/020.melhorando_visibilidade_healthcheck.md
