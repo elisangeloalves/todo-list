@@ -1,12 +1,11 @@
-DROP database IF exists todo;
-CREATE database todo;
+CREATE database IF NOT EXISTS todo;
+
 USE todo;
 
-DROP TABLE IF exists task;
-CREATE TABLE task (
-id bigint not null auto_increment,
-task_name varchar(100) NOT NULL,
-status varchar(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS task (
+id bigint not null,
+task_name varchar(100) not null,
+status varchar(10) not null,
 primary key (id)
 );
 
