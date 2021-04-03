@@ -31,7 +31,7 @@ services:
       - ./config:/prometheus
       - ./data/prometheus:/data
     command:
-      - '--config.file=/prometheus/prometheus.yml'
+      - '--config.file=/prometheus.yml'
       - '--storage.tsdb.path=/prometheus-data'
     ports:
       - 9090:9090

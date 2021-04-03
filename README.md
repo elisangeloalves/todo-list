@@ -1,10 +1,32 @@
 
-# TODO LIST API RESTFUL - em linguagem JAVA
-  - (Creat Read Update Delete - CRUD API RESTFULL)
+# 						TODO-LIST API RESTFUL - em linguagem JAVA
+##				 		(Creat Read Update Delete - CRUD API RESTFULL)
 
-repositório para projetos pessoais desenvolvidos em Java
+Este projeto pode ser visualizado e executado em um computador pessoal. Para isso o computador precisa ter instalados os seguintes programas: 
+		
+		- Docker, Docker Compose e um gerenciador de requisições HTTP ex: Postman, Insomia, ou algo do tipo.
 
----
+Com estes requisitos basicos suportados, siga as orientações a abaixo:
+
+		- crie um diretório em um local de sua preferencia no seu computador;
+		- na pagina principal deste projeto no site do gitHub você deve conseguir localizar um botão verde escrito "Code";
+		- clique neste botão e selecione na janela pop-up que abrir a opção que melhor te servir e copie o link que estiver dentro da janela.
+			- ex: SSH ->  git@github.com:preto115/Projetos-Java.git
+		- volte á janela do seu diretorio onde deseja clonar  o projeto e digite o seguinte comando e cole o link que vc copiou do projeto:
+			
+##### 			localhost:$  git  clone  git@github.com:preto115/Projetos-Java/todo-List.git
+			
+		- após o git concluir a clonagem, navegue para dentro da pasta clonada (:$ cd todo-List ) e em seguida digite o seguinte comando:
+		
+##### 			localhost:$  docker-compose  up  -d
+			
+		- pronto agora é so aguardar os containers serem criados. Apos o terminal liberar o curso, verifique se os container estão rodando com o seguinte comando:
+		
+##### 			localhost:$  docker container  ps  -a
+			
+		- deverá ter 3 container parecidos com os abaixo, sendo 2 com stasus UP (todo-backend e mysql)e um outro com com status Restarting (prometheus);
+		- agora basta abrir um programa de monitoramento de requisições HTTP (Postman ou Insomia) e acessar os endPoint relacionados abaixo.
+
 ## FUNCIONALIDADES  DESENVOLVIDAS NESTE PROJETO:
 
 
