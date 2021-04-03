@@ -13,7 +13,9 @@ Com estes requisitos basicos suportados, siga as orientações a abaixo:
 		- localizar um botão verde escrito "Code";
 		- clique neste botão e selecione na janela pop-up que abrir a opção que
 		-  melhor te servir e copie o link que estiver dentro da janela.
-			- ex: SSH ->  git@github.com:preto115/Projetos-Java.git
+
+####		 ex: SSH ->  git@github.com:preto115/Projetos-Java.git
+
 		- volte á janela do seu diretorio onde deseja clonar  o projeto e digite 
 		- o seguinte comando e cole o link que vc copiou do projeto:
 			
