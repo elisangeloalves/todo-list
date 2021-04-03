@@ -34,6 +34,8 @@ Com estes requisitos basicos suportados, siga as orientações a abaixo:
 		- agora basta abrir um programa de monitoramento de requisições HTTP 
 		- (Postman ou Insomia) e acessar os endPoint relacionados abaixo.
 
+
+
 ## FUNCIONALIDADES  DESENVOLVIDAS NESTE PROJETO:
 
 
@@ -54,6 +56,8 @@ Com estes requisitos basicos suportados, siga as orientações a abaixo:
   - atualiza uma tarefa existente no banco de dados através do ID -- (PUT /todo/1) 
     - ex: { name: "nome editado", status: "completed" } 
  
+ ![image](https://user-images.githubusercontent.com/64562701/113464857-3b44a080-9406-11eb-84d1-04cbe5258e2a.png)
+
 ---
 ## - EXTRA - Rotas de monitoramento da API RESTFUL: 
 
