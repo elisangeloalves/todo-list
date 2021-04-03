@@ -32,9 +32,12 @@ Com estes requisitos basicos suportados, siga as orientações a abaixo:
 ##### 			localhost:$  docker container  ps  -a
 			
 		- deverá ter 3 container parecidos com os abaixo, sendo 2 com stasus UP 
-		- (todo-backend e mysql)e um outro com com status Restarting (prometheus);
-		- agora basta abrir um programa de monitoramento de requisições HTTP 
-		- (Postman ou Insomia) e acessar os endPoint relacionados abaixo.
+		- (todo-backend e mysql)e um outro com com status Restarting (prometheus) como no print;
+
+![image](https://user-images.githubusercontent.com/64562701/113464929-c02fba00-9406-11eb-8405-abf091c9eaba.png)
+
+		 
+Agora basta abrir um programa de monitoramento de requisições HTTP -(Postman ou Insomia) e acessar os endPoint relacionados abaixo.
 
 
 
@@ -57,9 +60,6 @@ Com estes requisitos basicos suportados, siga as orientações a abaixo:
 	
   - atualiza uma tarefa existente no banco de dados através do ID -- (PUT /todo/1) 
     - ex: { name: "nome editado", status: "completed" } 
-
-
-![image](https://user-images.githubusercontent.com/64562701/113464929-c02fba00-9406-11eb-8405-abf091c9eaba.png)
 
 ## - EXTRA - Rotas de monitoramento da API RESTFUL: 
 
