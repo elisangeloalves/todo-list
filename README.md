@@ -55,10 +55,10 @@ Com estes requisitos basicos suportados, siga as orientações a abaixo:
 	
   - atualiza uma tarefa existente no banco de dados através do ID -- (PUT /todo/1) 
     - ex: { name: "nome editado", status: "completed" } 
- 
- ![image](https://user-images.githubusercontent.com/64562701/113464857-3b44a080-9406-11eb-84d1-04cbe5258e2a.png)
 
----
+
+![image](https://user-images.githubusercontent.com/64562701/113464929-c02fba00-9406-11eb-8405-abf091c9eaba.png)
+
 ## - EXTRA - Rotas de monitoramento da API RESTFUL: 
 
   - Rota para validar o funcionamento dos componentes da API via Spring Actuator
