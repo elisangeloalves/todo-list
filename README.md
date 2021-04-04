@@ -9,8 +9,10 @@ Este projeto pode ser visualizado e executado em um computador local. Para isso 
 Com estes requisitos basicos atendidos, siga as orientações a abaixo:
 
 		- crie um diretório em um local de sua preferencia no seu computador;
-		- na pagina principal deste projeto no site do gitHub você deve conseguir localizar um botão verde escrito "Code";
-		- clique nesse botão verde e selecione na janela pop-up que abrir a opção que melhor te servir e copie o link que estiver dentro da janela.
+		- na pagina principal deste projeto no site do gitHub você deve 
+		conseguir localizar um botão verde escrito "Code";
+		- clique nesse botão verde e selecione na janela pop-up que abrir a opção 
+		que melhor te servir e copie o link que estiver dentro da janela.
 
 ####		 ex: SSH ->  git@github.com:preto115/Projetos-Java.git
 
