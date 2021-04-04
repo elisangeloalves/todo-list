@@ -4,7 +4,7 @@
 
 Este projeto pode ser visualizado e executado em um computador local. Para isso o computador precisa ter instalados previamente os seguintes programas: 
 		
-		- Docker, Docker Compose e um gerenciador de requisições HTTP ex: Postman, Insomia, ou algo do tipo.
+- Docker, Docker Compose e um gerenciador de requisições HTTP ex: Postman, Insomia, ou algo do tipo.
 
 Com estes requisitos basicos atendidos, siga as orientações a abaixo:
 
