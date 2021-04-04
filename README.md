@@ -8,11 +8,9 @@ Este projeto pode ser visualizado e executado em um computador local. Para isso 
 
 Com estes requisitos basicos atendidos, siga as orientações a abaixo:
 
-		- crie um diretório em um local de sua preferencia no seu computador;
-		- na pagina principal deste projeto no site do gitHub você deve 
-		conseguir localizar um botão verde escrito "Code";
-		- clique nesse botão verde e selecione na janela pop-up que abrir a opção 
-		que melhor te servir e copie o link que estiver dentro da janela.
+- crie um diretório em um local de sua preferencia no seu computador;
+- na pagina principal deste projeto no site do gitHub você deve conseguir localizar um botão verde escrito "Code";
+- clique nesse botão verde e selecione na janela pop-up que abrir a opção que melhor te servir e copie o link que estiver dentro da janela.
 
 ####		 ex: SSH ->  git@github.com:preto115/Projetos-Java.git
 
@@ -23,9 +21,9 @@ Com estes requisitos basicos atendidos, siga as orientações a abaixo:
 			
 		- após o git concluir a clonagem, navegue para dentro da pasta clonada:
 	
-##### 			localhost:$ cd todo-List   		-  e em seguida digite o seguinte comando:
+##### 			localhost:$ cd todo-List   		
 
-		-			em seguida digite o comando abaixo:
+		-  e em seguida digite o seguinte comando:
 		
 ##### 			localhost:$  docker-compose  up  -d
 			
@@ -34,9 +32,8 @@ Com estes requisitos basicos atendidos, siga as orientações a abaixo:
 		
 ##### 			localhost:$  docker container  ps  -a
 			
-		- deverá ter 3 container parecidos como abaixo, sendo 2 com stasus <b>UP <b>
-		-- (todo-backend e mysql)
-		e um outro com status <b>Restarting<b> (prometheus) como no print;
+		- deverá ter 3 container parecidos como abaixo, sendo 2 com stasus "UP"  (todo-backend e mysql)
+		- e um outro com status "Restarting" (prometheus) como no print;
 
 ![image](https://user-images.githubusercontent.com/64562701/113464929-c02fba00-9406-11eb-8405-abf091c9eaba.png)
 
