@@ -1,11 +1,4 @@
-CREATE database IF NOT EXISTS todo;
-
-USE todo;
-
-CREATE TABLE IF NOT EXISTS task (
-id bigint not null,
-task_name varchar(100) not null,
-status varchar(10) not null,
-primary key (id)
-);
---
+INSERT INTO task(task_name, status) VALUES('Investir em cursos e certificacoes', 'pending');
+INSERT INTO task(task_name, status) VALUES('Iniciar transição de carreira', 'completed');
+INSERT INTO task(task_name, status) VALUES('Fazer projeto para o avaliação técnica', 'completed');
+INSERT INTO task(task_name, status) VALUES('Pagar as contas atrasadas', 'pending');
