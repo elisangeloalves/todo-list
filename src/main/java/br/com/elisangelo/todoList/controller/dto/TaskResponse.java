@@ -1,7 +1,6 @@
-package br.com.elisangelo.todoList.controller.Dto;
+package br.com.elisangelo.todoList.controller.dto;
 
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import br.com.elisangelo.todoList.model.Status;

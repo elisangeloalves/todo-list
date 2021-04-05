@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import br.com.elisangelo.todoList.controller.Dto.TaskResponse;
+import br.com.elisangelo.todoList.controller.dto.TaskResponse;
 import br.com.elisangelo.todoList.controller.form.TaskRequest;
 import br.com.elisangelo.todoList.controller.form.UpdateRequest;
 import br.com.elisangelo.todoList.model.Status;
@@ -74,7 +74,7 @@ public class TaskController {
 		Optional<Task> optional = repository.findById(id);
 		if (optional.isPresent()) {
 			repository.deleteById(id);
-			return ResponseEntity.ok("{\n\tmessage: Tarefa deletada com sucesso\n} ");
+			return ResponseEntity.accepted().build();
 		}
 
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\n\tmessage: Tarefa não encontrada\n} ");
