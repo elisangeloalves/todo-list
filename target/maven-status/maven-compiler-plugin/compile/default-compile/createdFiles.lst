@@ -1,0 +1,13 @@
+br/com/elisangelo/todoList/model/Task.class
+br/com/elisangelo/todoList/config/validation/FormDto.class
+br/com/elisangelo/todoList/controller/form/TaskRequest.class
+br/com/elisangelo/todoList/controller/form/TaskUpdate.class
+br/com/elisangelo/todoList/config/validation/UniqueName.class
+br/com/elisangelo/todoList/model/Status.class
+br/com/elisangelo/todoList/config/validation/ErrorHandler.class
+br/com/elisangelo/todoList/config/healthCheck/MyHealthCheck.class
+br/com/elisangelo/todoList/controller/TaskController.class
+br/com/elisangelo/todoList/repository/TaskRepository.class
+br/com/elisangelo/todoList/config/validation/UniqueNameValidator.class
+br/com/elisangelo/todoList/controller/dto/TaskResponse.class
+br/com/elisangelo/todoList/MyTodoList.class

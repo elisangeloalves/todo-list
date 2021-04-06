@@ -1,0 +1,14 @@
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/model/Status.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/config/validation/UniqueNameValidator.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/config/package-info.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/config/validation/FormDto.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/repository/TaskRepository.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/controller/dto/TaskResponse.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/model/Task.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/controller/form/TaskRequest.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/MyTodoList.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/controller/form/TaskUpdate.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/config/healthCheck/MyHealthCheck.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/controller/TaskController.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/config/validation/UniqueName.java
+/Users/preto/JAVA/todo-list/src/main/java/br/com/elisangelo/todoList/config/validation/ErrorHandler.java
