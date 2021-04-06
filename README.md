@@ -38,7 +38,7 @@ Com estes requisitos basicos atendidos, siga as orientações a abaixo:
 ![image](https://user-images.githubusercontent.com/64562701/113464929-c02fba00-9406-11eb-8405-abf091c9eaba.png)
 
 		 
-Agora basta abrir um programa de monitoramento de requisições HTTP -(Postman ou Insomia) e acessar os endPoint relacionados abaixo.
+Agora basta abrir um programa de monitoramento (execução de requisições HTTP) - ex: Postman ou Insomia e acessar os endPoints relacionados abaixo.
 
 NOTE: é possivel que mesmo estando como status UP, após tentar acessar os endpoints, deve ter algum delay de acesso devido ao seu computador está processando os dados ainda da API e do banco de dados; então dê um tempinho para que a aplicação suba por completo antes de tentar acessar os endPoints.
 
@@ -63,9 +63,21 @@ NOTE: é possivel que mesmo estando como status UP, após tentar acessar os endp
     	-- ex: (DELETE /todo/2 )
 	
   - atualiza uma tarefa existente no banco de dados através do ID 
-  	-- ex: { name: "nome editado", status: "completed" } (PUT /todo/1) 
+  	-- ex: { name: "nome da tarefa previamente criada", status: "completed" } (PUT /todo/1) 
 
 ---
+
+#### ATENÇÃO AS RESTRIÇÕES
+######	- não é possível atualizar ou deletar uma tarefa que não esteja previamente cadastrada no banco de dados; RETORNO(STATUS - 404);
+######	- para atualizar uma tarefa ja cadastrada, só é possível mudar o status entre "pending" ou "completed", nao sendo permitido mudar o nome da tarefa, 
+para esta situação, o indicado é excluir a tarefa nao desejada e criar uma nova tarefa. para status fora do padrão: 
+RETORNO(STATUS - 400);
+######	- É possível adicionar uma tarefa com o nome somente e está será registrada com status "pending" no banco de dadosç todavia é possível adicionar uma tarefa com status "completed" para simples controle e monitoramento das tarefas já concluídas.
+######	- Para todas as informações que que não estiverem dentro dos padroes de aceitação válidos dos dados, o RETORNO(STATUS - 400);
+######	- Quaquer outra inserção de dados que a API não estiver preparada para lidar com ela, terá um RETORNO(STATUS - 500);
+
+---
+
 ## - EXTRA - Rotas de monitoramento da API RESTFUL: 
 
   - Rota para validar o funcionamento dos componentes da API via Spring Actuator
