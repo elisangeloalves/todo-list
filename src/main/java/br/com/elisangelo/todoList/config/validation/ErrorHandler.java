@@ -38,7 +38,7 @@ public class ErrorHandler {
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
     @ExceptionHandler(InvalidFormatException.class)
     public FormDto statusHandle(InvalidFormatException exception) {
-		return new FormDto(exception.getClass().getSimpleName(), exception.getOriginalMessage());
+		return new FormDto(exception.getClass().getSimpleName(), exception.getLocalizedMessage());
     	
     }
 }

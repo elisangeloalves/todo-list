@@ -28,10 +28,6 @@ public class TaskRequest {
 		return new Task(this.name, this.status);
 	}
 
-	public TaskRequest(String string) {
-		this.name = string;
-	}
-	
 	public TaskRequest(String string, Status status) {
 		this.name = string;
 		this.status = status;

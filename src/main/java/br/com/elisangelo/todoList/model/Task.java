@@ -11,17 +11,16 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import org.springframework.util.Assert;
-
 @Entity
 public class Task {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@NotBlank
-	@Column(nullable=false, name="task_name", length=100)
+	@Column(nullable = false, name = "task_name", length = 100)
 	private String name;
-	@NotNull @Column(nullable=false, length=10)
+	@NotNull
+	@Column(nullable = false, length = 10)
 	@Enumerated(EnumType.STRING)
 	private Status status = Status.pending;
 
@@ -32,7 +31,7 @@ public class Task {
 	public Task(@NotBlank String name, Status status) {
 		this.name = name;
 		if (status != null) {
-		this.status = status;
+			this.status = status;
 		}
 	};
 
@@ -48,8 +47,8 @@ public class Task {
 		return status;
 	}
 
-	public void setStatus(@NotNull @Valid Status editedStatus) {
-		this.status = editedStatus;
+	public void setStatus(@NotNull @Valid Status onlyStatus) {
+		this.status = onlyStatus;
 	}
 
 	@Override
@@ -79,7 +78,5 @@ public class Task {
 			return false;
 		return true;
 	}
-	
-	
 
 }

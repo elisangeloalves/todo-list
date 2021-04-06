@@ -67,14 +67,15 @@ NOTE: é possivel que mesmo estando como status UP, após tentar acessar os endp
 
 ---
 
-#### ATENÇÃO AS RESTRIÇÕES
-######	- não é possível atualizar ou deletar uma tarefa que não esteja previamente cadastrada no banco de dados; RETORNO(STATUS - 404);
-######	- para atualizar uma tarefa ja cadastrada, só é possível mudar o status entre "pending" ou "completed", nao sendo permitido mudar o nome da tarefa, 
+#### ATENÇÃO OBSERVAÇÕES E AS RESTRIÇÕES
+  - Requisições de "delete" que forem bem sucedidas aparentemente nao irá retornar nada no corpo da resposta mas terá (STATUS - 202);
+  - não é possível atualizar ou deletar uma tarefa que não esteja previamente cadastrada no banco de dados; RETORNO(STATUS - 404);
+  - para atualizar uma tarefa ja cadastrada, só é possível mudar o status entre "pending" ou "completed", nao sendo permitido mudar o nome da tarefa, 
 para esta situação, o indicado é excluir a tarefa nao desejada e criar uma nova tarefa. para status fora do padrão: 
 RETORNO(STATUS - 400);
-######	- É possível adicionar uma tarefa com o nome somente e está será registrada com status "pending" no banco de dadosç todavia é possível adicionar uma tarefa com status "completed" para simples controle e monitoramento das tarefas já concluídas.
-######	- Para todas as informações que que não estiverem dentro dos padroes de aceitação válidos dos dados, o RETORNO(STATUS - 400);
-######	- Quaquer outra inserção de dados que a API não estiver preparada para lidar com ela, terá um RETORNO(STATUS - 500);
+	- É possível adicionar uma tarefa com o nome somente e está será registrada com status "pending" no banco de dadosç todavia é possível adicionar uma tarefa com status "completed" para simples controle e monitoramento das tarefas já concluídas.
+	- Para todas as informações que que não estiverem dentro dos padroes de aceitação válidos dos dados, o RETORNO(STATUS - 400);
+	- Quaquer outra inserção de dados que a API não estiver preparada para lidar com ela, terá um RETORNO(STATUS - 500);
 
 ---
 

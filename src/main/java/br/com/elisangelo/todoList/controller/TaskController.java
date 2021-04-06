@@ -23,7 +23,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import br.com.elisangelo.todoList.controller.dto.TaskResponse;
 import br.com.elisangelo.todoList.controller.form.TaskRequest;
-import br.com.elisangelo.todoList.controller.form.UpdateRequest;
+import br.com.elisangelo.todoList.controller.form.TaskUpdate;
 import br.com.elisangelo.todoList.model.Status;
 import br.com.elisangelo.todoList.model.Task;
 import br.com.elisangelo.todoList.repository.TaskRepository;
@@ -82,16 +82,15 @@ public class TaskController {
 
 	@PutMapping("/{id}")
 	@Transactional
-	public ResponseEntity<TaskResponse> updateTask(@PathVariable Long id, @RequestBody @Valid UpdateRequest request) {
+	public ResponseEntity<TaskResponse> updateTask(@PathVariable Long id, @RequestBody @Valid TaskUpdate request) {
 
 		Optional<Task> optionalTask = repository.findById(id);
 		if (optionalTask.isPresent()) {
 			optionalTask.get().setStatus(request.getStatus());
 			return ResponseEntity.ok(new TaskResponse(optionalTask.get()));
 		}
-		return  ResponseEntity.notFound().build();
+		return ResponseEntity.notFound().build();
 
 	}
 
 }
-
