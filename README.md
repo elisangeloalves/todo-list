@@ -1,7 +1,23 @@
 
-# 						TODO-LIST API RESTFUL - em linguagem JAVA
-##				 		(Creat Read Update Delete - CRUD API RESTFULL)
+# 						TODO-LIST API RESTFUL - em JAVA
+				 	(Creat Read Update Delete - CRUD API RESTFULL)
 
+### Informações sobre a API:
+
+Projeto TODO-LIST API (Backend) RESTFUL API simples em JAVA que possibilita inserir,  armazenar e atualizar tarefas e o status da mesma.
+> Toda tarefa deve possuir um status (pending ou completed);
+>
+> A API persisti os dados em um banco de dados;
+> 
+> A API disponibiliza uma rota para listagem das tarefas e seu status (GET /todo);
+> 
+> A API fornece uma rota para validar o funcionamento de seus componentes (GET /healthcheck);
+> 
+> A API fornece uma rota com indicadores de performance da API (ex: volume de requisições atendidas,
+> tempo médio de serviço em milissegundos, etc) (GET /metrics);
+> 
+> Desenvolvimento do Frontend para input dos dados na API esta em andamento no momento.
+###
 Este projeto pode ser visualizado e executado em um computador local. Para isso o computador precisa ter instalados previamente os seguintes programas: 
 		
 -- Docker, Docker Compose e um gerenciador de requisições HTTP ex: Postman, Insomia, ou algo do tipo.
